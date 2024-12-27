@@ -47,7 +47,9 @@ export default function ClientSide() {
         ) : (
           <div className="flex-grow container mx-auto p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product) => (
-              <div className="bg-white p-4 shadow rounded-lg">
+              <div
+                key={product.id}
+                className="bg-white p-4 shadow rounded-lg">
                 <img
                   src={product.image}
                   alt={product.title}
